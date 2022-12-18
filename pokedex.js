@@ -47,7 +47,7 @@ function PokemonRender(pokemonCharacteristic, pokemonDescription, pokemonType) {
     const PokemonCard = document.createElement('div');
     PokemonCard.classList.add("PokemonBox")
     PokemonCard.innerHTML = ` 
-
+sget
 <div class="Description ${pokemonType.types[0].type.name}">
          <p class="BottomText">No.${pokemonCharacteristic.id}</p>
          <img src="${pokemonCharacteristic.sprites.versions['generation-v']['black-white'].animated.front_default}"
