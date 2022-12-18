@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon card</title>
+    <script src="pokedex.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    p {
+        margin: 0;
+    }
+
+    body {
+        background-image: url(d5nhuuq-79a016a3-c066-4ac1-9d1a-6ff2b79f7569.png);
+    }
+
+    .PokemonBox {
+       
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+
+    .Description {
+        display: flex;
+        position: relative;
+        border-radius: 1rem;
+        padding: 1rem;
+        width: 12rem;
+        height: 10rem;
+        transition: 1s;
+    }
+
+    .Description:hover {
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+        padding: 1rem;
+        width: 43rem;
+        height: 15rem;
+        transition: 0.5s;
+    }
+
+    /*
+    Pokemon type colors
+    */
+    .grass:hover {
+        background-color: lightgreen;
+    }
+
+    .fire:hover {
+        background-color: rgb(235, 112, 112);
+    }
+
+    .rock:hover {
+        background-color: rgb(177, 95, 36);
+    }
+
+    .water:hover {
+        background-color: lightblue;
+    }
+
+    .bug:hover {
+        background-color: rgb(3, 112, 3);
+    }
+
+    .normal:hover {
+        background-color: wheat;
+    }
+
+    .electric:hover {
+        background-color: yellow;
+    }
+
+    .poison:hover {
+        background-color: violet;
+    }
+
+    .psychic:hover {
+        background-color: deeppink;
+    }
+
+    .ground:hover {
+        background-color: rgb(192, 92, 20);
+    }
+
+    .ice:hover {
+        background-color: aqua;
+    }
+
+    .fighting:hover {
+        background-color: maroon;
+    }
+    .ghost:hover {
+
+        background-color: darkslateblue;
+    }
+
+    .fairy:hover {
+        background-color: hotpink;
+    }
+
+    .dragon:hover {
+        background-color: rgb(66, 53, 148);
+    }
+
+    /*
+    Pokemon colors
+    */
+    .MiddleSection {
+        width: 20rem;
+        visibility: hidden;
+        opacity: 0;
+        height: 1rem;
+    }
+
+    .RightSection {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .Description:hover .MiddleSection {
+        transition: 2s;
+        opacity: 1;
+        transition: opacity 2.5s;
+        visibility: visible;
+    }
+
+    .Description:hover .RightSection {
+        transition: 2s;
+        opacity: 1;
+        transition: opacity 2.5s;
+        visibility: visible;
+    }
+
+    .Description:hover .PokemonDescription {
+        transition: 2s;
+        opacity: 1;
+        transition: opacity 2.5s;
+        visibility: visible;
+    }
+
+    .Description:hover .PokemonImgSize {
+        transition: 1s;
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .PokemonDescription {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .MiddleText {
+        font-family: Roboto;
+        font-weight: bold;
+    }
+
+    .BottomText {
+        font-family: Roboto;
+    }
+
+    .RightSection {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .PokemonImgSize {
+        width: 10rem;
+        height: 10rem;
+        image-rendering: pixelated;  /*reddit help*/
+    }
+
+    .PokemonCollection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        row-gap: 2rem;
+    }
+
+</style>
+
+<body>
+    <main id="main" class="main">
+        <audio controls>
+            <source src="1-01. Opening.mp3" type="audio/ogg">
+        </audio>
+        <div style="display: flex; justify-content: center;"> <!--hacer una clase-->
+            <img src="toppng.com-pokemon-logo-logo-transparent-png-300x145.png">
+        </div>
+        <div id="PokemonCollection" class="PokemonCollection"></div>
+    </main>
+</body>
+
+</html>
